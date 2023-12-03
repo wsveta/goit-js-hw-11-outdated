@@ -1,2 +1,115 @@
 @import './common';
 @import './example';
+
+body {
+  position: relative;
+  color: #333333;
+  text-align: center;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: -50px;
+}
+.container {
+  padding: 0 30px;
+  margin: 0 auto;
+}
+.hero-title {
+  margin-top: 77px;
+}
+.search-form {
+  margin: 30px 0;
+}
+
+.input-container {
+  position: relative;
+}
+.input-container::after {
+  position: absolute;
+  content: url(../images/search.svg);
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: filter 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.input-container:hover::after {
+  filter: drop-shadow(6px 1px 1px #cacaca);
+  content: url(../images/search.svg);
+}
+
+.search-button {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border: transparent;
+  outline: transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+.input-form {
+  outline: transparent;
+  width: 717px;
+  height: 66px;
+  padding: 15px;
+  font-size: 20px;
+  flex-shrink: 0;
+  border-radius: 56px;
+  border: 1px solid #edeef0;
+  background: #fdfdfd;
+  box-shadow: 0px 2px 20px 0px rgba(18, 27, 33, 0.204);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 20px;
+  padding: 70px;
+}
+
+.gallery a {
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(18, 27, 33, 0.204);
+  overflow: hidden;
+  flex-basis: calc((100% - 40px) / 3);
+}
+.image {
+  height: 350px;
+  width: auto;
+  object-fit: cover;
+}
+.info {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.load-more {
+  height: 66px;
+  padding: 0 30px;
+  font-size: 20px;
+  flex-shrink: 0;
+  border-radius: 56px;
+  border: 1px solid #edeef0;
+  background: #fdfdfd;
+  box-shadow: 0px 2px 20px 0px rgba(18, 27, 33, 0.204);
+  margin-bottom: 150px;
+}
+
+.load-more:hover {
+  box-shadow: 0px 2px 20px 0px rgba(18, 27, 33, 0.393);
+}
+
+.hidden {
+  display: none;
+}
