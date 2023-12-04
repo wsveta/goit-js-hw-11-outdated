@@ -104,10 +104,16 @@ header {
   background: #fdfdfd;
   box-shadow: 0px 2px 20px 0px rgba(18, 27, 33, 0.204);
   margin-bottom: 150px;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .load-more:hover {
   box-shadow: 0px 2px 20px 0px rgba(18, 27, 33, 0.393);
+}
+
+.load-more:active {
+  background-color: #cacaca;
+  border-color: #cacaca;
 }
 
 .hidden {
