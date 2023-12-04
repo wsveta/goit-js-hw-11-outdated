@@ -103,7 +103,25 @@ async function makeCards(response) {
     )
     .join('');
   refs.gallery.innerHTML += markup;
+
+  const { height: cardHeight } = refs.gallery
+  .firstElementChild.getBoundingClientRect();
+
+window.scrollBy({
+  top: cardHeight / 2,
+  behavior: 'smooth',
+});
+
   refs.loadBtn.classList.remove('hidden');
   let simplelightbox = new SimpleLightbox('.gallery a', {});
   simplelightbox.refresh();
 }
+
+const { height: cardHeight } = document
+  .querySelector('.gallery')
+  .firstElementChild.getBoundingClientRect();
+
+window.scrollBy({
+  top: cardHeight / 2,
+  behavior: 'smooth',
+});
